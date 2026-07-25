@@ -6,26 +6,23 @@ class Solution {
         HashSet<Integer> set1 = new HashSet<>();
         HashSet<Integer> result = new HashSet<>();
 
-        // Store nums1 elements
-        for (int num : nums1) {
-            set1.add(num);
+        for(int x : nums1){
+            set1.add(x);
         }
 
-        // Find common elements
-        for (int num : nums2) {
-            if (set1.contains(num)) {
-                result.add(num);
+        for(int x : nums2){
+            if(set1.contains(x)){
+                result.add(x);
             }
         }
 
-        // Convert HashSet to int[]
-        int[] ans = new int[result.size()];
+        int [] arr = new int [result.size()];
         int i = 0;
 
-        for (int num : result) {
-            ans[i++] = num;
+        for(int x : result){
+            arr[i++] = x;
         }
 
-        return ans;
+        return arr;
     }
 }
