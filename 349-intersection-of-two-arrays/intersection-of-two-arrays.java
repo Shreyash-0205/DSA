@@ -3,26 +3,27 @@ import java.util.*;
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
 
-        HashSet<Integer> set1 = new HashSet<>();
-        HashSet<Integer> result = new HashSet<>();
+        HashSet <Integer> nums = new HashSet<>();
+        HashSet <Integer> ans = new HashSet<>();
 
         for(int x : nums1){
-            set1.add(x);
+            nums.add(x);
         }
 
         for(int x : nums2){
-            if(set1.contains(x)){
-                result.add(x);
+            if(nums.contains(x)){
+                ans.add(x);
             }
         }
 
-        int [] arr = new int [result.size()];
-        int i = 0;
+        int [] result = new int [ans.size()];
 
-        for(int x : result){
-            arr[i++] = x;
+        int i = 0;
+        for(int num : ans){
+            result[i] = num;
+            i++;
         }
 
-        return arr;
+        return result;
     }
 }
