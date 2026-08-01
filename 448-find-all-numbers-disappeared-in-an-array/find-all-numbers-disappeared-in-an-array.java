@@ -1,22 +1,19 @@
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
 
-        HashSet<Integer> set = new HashSet<>();
+        HashSet <Integer> map = new HashSet<>();
 
-        // Store all numbers in the set
-        for (int num : nums) {
-            set.add(num);
+        for(int x : nums){
+            map.add(x);
         }
 
-        List<Integer> result = new ArrayList<>();
+        List <Integer> ans = new ArrayList <>();
 
-        // Check which numbers are missing
-        for (int i = 1; i <= nums.length; i++) {
-            if (!set.contains(i)) {
-                result.add(i);
+        for(int i = 1;i<=nums.length;i++){
+            if(!map.contains(i)){
+                ans.add(i);
             }
         }
-
-        return result;
+        return ans;
     }
 }
