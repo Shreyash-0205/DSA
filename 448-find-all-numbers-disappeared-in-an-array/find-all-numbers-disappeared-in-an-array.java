@@ -5,15 +5,15 @@ class Solution {
 
         for(int x : nums){
             map.add(x);
-        }
+        } 
 
-        List <Integer> ans = new ArrayList <>();
+        ArrayList <Integer> list = new ArrayList<>();
 
         for(int i = 1;i<=nums.length;i++){
             if(!map.contains(i)){
-                ans.add(i);
+                list.add(i);
             }
         }
-        return ans;
+        return list;
     }
 }
